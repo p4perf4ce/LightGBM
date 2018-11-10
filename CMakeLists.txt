@@ -113,7 +113,7 @@ if(USE_HDFS)
 endif(USE_HDFS)
 
 if(UNIX OR MINGW OR CYGWIN)
-    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread -fmerge-constants -fmove-loop-invariants -fomit-frame-pointer -freorder-blocks -fshrink-wrap -fshrink-wrap-separate -fsplit-wide-types -fssa-backprop -fssa-phiopt -ftree-bit-ccp -ftree-ccp -ftree-ch -ftree-coalesce-vars -ftree-copy-prop -ftree-dce -ftree-dominator-opts -ftree-dse -ftree-forwprop -ftree-fre -ftree-phiprop -ftree-scev-cprop -ftree-sink -ftree-slsr -ftree-sra -ftree-pta -ftree-ter -funit-at-a-time -Wextra -Wall -Wno-ignored-attributes -Wno-unknown-pragmas -Wno-return-type")
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread -fipa-reference-addressable -Wextra -Wall -Wno-ignored-attributes -Wno-unknown-pragmas -Wno-return-type")
 endif()
 
 if(WIN32 AND MINGW)
